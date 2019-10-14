@@ -13,3 +13,16 @@
 * cold (froid) : pas de désinscription au flux (faite après le complete)
 * chaud (hot) : désinscription explicite
 
+## Modules, components
+Modules -> Components
+
+## Poids des sélecteurs CSS
+balise => 1
+attribut => 10
+id => 100
+style => 1000
+important => the boss !
+
+## Wrapper bootstrap pour Angular
+ngx-bootstrap
+ng-bootstrap
