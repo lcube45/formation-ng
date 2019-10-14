@@ -1,27 +1,15 @@
-# Crm
+# RxJS
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
+## Type d'observables
 
-## Development server
+* Observable (flux de données distribué à partir du moment ou il y a un souscripteur)
+* Subject (flux de données distribué sans cache même si pas de souscripteur)
+* BehaviorSubject (idem subject avec 1 niveau de cache)
+* ReplaySubject (behavior avec cache plus important)
+* AsyncSubject (behavior avec dernier élément en cache)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Nature d'observables
 
-## Code scaffolding
+* cold (froid) : pas de désinscription au flux (faite après le complete)
+* chaud (hot) : désinscription explicite
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
