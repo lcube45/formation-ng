@@ -26,3 +26,6 @@ important => the boss !
 ## Wrapper bootstrap pour Angular
 ngx-bootstrap
 ng-bootstrap
+
+## Schematics
+ng add @ng-bootstrap/schematics
