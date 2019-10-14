@@ -9,6 +9,9 @@ import { NavComponent } from './components/nav/nav.component';
   declarations: [UiComponent, HeaderComponent, FooterComponent, NavComponent],
   imports: [
     CommonModule
+  ],
+  exports: [
+    UiComponent
   ]
 })
 export class UiModule { }
