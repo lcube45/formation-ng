@@ -29,3 +29,4 @@ ng-bootstrap
 
 ## Schematics
 ng add @ng-bootstrap/schematics
+ng update @ng-bootstrap/ng-bootstrap
