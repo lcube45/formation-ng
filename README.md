@@ -30,3 +30,8 @@ ng-bootstrap
 ## Schematics
 ng add @ng-bootstrap/schematics
 ng update @ng-bootstrap/ng-bootstrap
+
+## Types de composants
+Composants d'affichage (silly)
+Composants de conteneurs (organisent d'autres composants)
+Composants de layout (mise en page)
