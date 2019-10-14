@@ -35,3 +35,7 @@ ng update @ng-bootstrap/ng-bootstrap
 Composants d'affichage (silly)
 Composants de conteneurs (organisent d'autres composants)
 Composants de layout (mise en page)
+
+## Génération de documentation
+npm -g @compodoc/compodoc
+npm run generate-doc
