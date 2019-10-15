@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "generate-doc": "compodoc -p tsconfig.app.json -s -o"
+    "generate-doc": "compodoc -p tsconfig.app.json -s -o",
+    "bundle-analyze": "ng build --prod --stats-json && webpack-bundle-analyzer dist/crm/stats-es2015.json -p 4300"
   },
   "private": true,
   "dependencies": {
@@ -26,7 +27,7 @@
     "@ng-bootstrap/ng-bootstrap": "^5.1.1",
     "@ng-bootstrap/schematics": "^2.0.0-alpha.1",
     "bootstrap": "^4.0.0",
-    "moment": "^2.24.0",
+    "dayjs": "^1.8.16",
     "rxjs": "~6.5.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
@@ -50,6 +51,7 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.5.3"
+    "typescript": "~3.5.3",
+    "webpack-bundle-analyzer": "^3.5.2"
   }
 }
