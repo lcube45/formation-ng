@@ -1,0 +1,23 @@
+@import 'theme';
+
+div.top {
+  background: $color1;
+  padding: 2rem 1 rem;
+  text-align: center;
+
+  h1 {
+    margin: 0;
+    color: $light-color;
+    font-size: 1.5rem;
+  }
+
+  p {
+    margin-bottom: 0;
+    color: $light-color;
+    font-size: 0.9rem;
+  }
+}
+
+div.content {
+  border-right: $color1 solid 5px;
+}

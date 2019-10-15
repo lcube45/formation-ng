@@ -54,3 +54,5 @@ npm run generate-doc
 * Server side rendering pour les problèmes de SEO/Référencement
 * Lazy loading de module gère le préfixe des paths de routes
 * Si Lazy Loading de module, il faut utiliser le pre loading de module
+* Un composant ça se déclare, ça s'importe
+* Un module ça s'exporte
