@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuService } from '../../services/menu.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  status: boolean;
+
+  constructor(private menuService: MenuService) {
+    this.menuService.status$
+    .subscribe((data) => this.status = data);
+  }
 
   ngOnInit() {
   }
 
+  toggle() {
+    this.menuService.toggle();
+  }
 }

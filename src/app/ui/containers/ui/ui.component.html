@@ -1,3 +1,25 @@
-<app-header></app-header>
-<app-nav></app-nav>
-<app-footer></app-footer>
+<header class="fixed-top">
+  <app-header #head></app-header>
+</header>
+
+<main [ngClass]="{'close-aside' : !head.status}">
+
+  <div class="position-fixed shadow" (click)="head.toggle()"></div>
+
+  <aside>
+    <div class="scroller">
+      <app-nav></app-nav>
+    </div>
+  </aside>
+
+  <div class="page">
+    <div class="contents">
+      <h1>Partie dynamique {{head.status}}</h1>
+    </div>
+
+    <footer>
+      <app-footer></app-footer>
+    </footer>
+  </div>
+
+</main>

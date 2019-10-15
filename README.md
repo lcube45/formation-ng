@@ -39,3 +39,11 @@ Composants de layout (mise en page)
 ## Génération de documentation
 npm -g @compodoc/compodoc
 npm run generate-doc
+
+## 
+* interpolation : {{ mavar }}
+* property binding : []={}
+
+Faire communiquer des composants entre eux via des services
+Les composants ne devraient tirer leur logique que des services
+Convention : ajouter un dollar en fin de nom de variables pour identifier des observables
