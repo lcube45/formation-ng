@@ -50,3 +50,4 @@ npm run generate-doc
 * Convention : ajouter un dollar en fin de nom de variables pour identifier des observables
 * Créer une librairie consiste à encapsuler un module pour être réutiliser
 * Toujours injecter les services en private
+* Routing : forRoot (instancie le routeur) alors que forChild (utilise l'instance déjà créée)
