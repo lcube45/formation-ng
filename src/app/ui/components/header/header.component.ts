@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuService } from '../../services/menu.service';
+import { Observable } from 'rxjs';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -8,11 +10,11 @@ import { MenuService } from '../../services/menu.service';
 })
 export class HeaderComponent implements OnInit {
 
-  status: boolean;
+  status$: Observable<boolean>;
+  faBars = faBars;
 
   constructor(private menuService: MenuService) {
-    this.menuService.status$
-    .subscribe((data) => this.status = data);
+    this.status$ = this.menuService.status$;
   }
 
   ngOnInit() {

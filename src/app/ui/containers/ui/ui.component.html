@@ -1,25 +1,29 @@
 <header class="fixed-top">
-  <app-header #head></app-header>
+  <app-header></app-header>
 </header>
 
-<main [ngClass]="{'close-aside' : !head.status}">
+<ng-container *ngIf="(status$ | async) as status">
 
-  <div class="position-fixed shadow" (click)="head.toggle()"></div>
+  <main [ngClass]="{'close-aside' : !status}">
 
-  <aside>
-    <div class="scroller">
-      <app-nav></app-nav>
+    <div class="position-fixed shadow" (click)="toggle()"></div>
+
+    <aside>
+      <div class="scroller">
+        <app-nav></app-nav>
+      </div>
+    </aside>
+
+    <div class="page">
+      <div class="contents">
+        <h1>Partie dynamique {{ status }}</h1>
+      </div>
+
+      <footer>
+        <app-footer></app-footer>
+      </footer>
     </div>
-  </aside>
 
-  <div class="page">
-    <div class="contents">
-      <h1>Partie dynamique {{head.status}}</h1>
-    </div>
+  </main>
 
-    <footer>
-      <app-footer></app-footer>
-    </footer>
-  </div>
-
-</main>
+</ng-container>

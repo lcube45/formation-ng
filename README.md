@@ -40,10 +40,13 @@ Composants de layout (mise en page)
 npm -g @compodoc/compodoc
 npm run generate-doc
 
-## 
+## Good to know
 * interpolation : {{ mavar }}
 * property binding : []={}
 
-Faire communiquer des composants entre eux via des services
-Les composants ne devraient tirer leur logique que des services
-Convention : ajouter un dollar en fin de nom de variables pour identifier des observables
+## Bonnes pratiques
+* Faire communiquer des composants entre eux via des services
+* Les composants ne devraient tirer leur logique que des services
+* Convention : ajouter un dollar en fin de nom de variables pour identifier des observables
+* Créer une librairie consiste à encapsuler un module pour être réutiliser
+* Toujours injecter les services en private

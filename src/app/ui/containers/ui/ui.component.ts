@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuService } from '../../services/menu.service';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-ui',
@@ -8,11 +9,10 @@ import { MenuService } from '../../services/menu.service';
 })
 export class UiComponent implements OnInit {
 
-  status: boolean;
+  status$: Observable<boolean>;
 
   constructor(private menuService: MenuService) {
-    this.menuService.status$
-    .subscribe((data) => this.status = data);
+    this.status$ = this.menuService.status$;
   }
 
   ngOnInit() {

@@ -7,11 +7,12 @@ import { BehaviorSubject } from 'rxjs';
 
 export class MenuService {
 
-  status$: BehaviorSubject<boolean> = new BehaviorSubject(false);
+  private pstatus$: BehaviorSubject<boolean> = new BehaviorSubject(true);
+  public status$ = this.pstatus$.asObservable();
 
   constructor() { }
 
   toggle() {
-    this.status$.next(!this.status$.value);
+    this.pstatus$.next(!this.pstatus$.value);
   }
 }
