@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UiModule } from './ui/ui.module';
-import { PrestationsModule } from './prestations/prestations.module';
 import { LoginModule } from './login/login.module';
 import { Router } from '@angular/router';
 
@@ -18,7 +17,6 @@ import { Router } from '@angular/router';
     AppRoutingModule,
     NgbModule,
     UiModule,
-    PrestationsModule,
     LoginModule
   ],
   providers: [],
