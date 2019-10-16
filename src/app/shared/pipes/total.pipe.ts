@@ -1,6 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { Prestation } from '../models/prestation';
-import { totalmem } from 'os';
 
 @Pipe({
   name: 'total'

@@ -5,8 +5,8 @@
       <tr *ngFor="let prestation of collection; let i = index">
         <th scope="row">{{ prestation.id }}</th>
         <td>
-          <select [(ngModel)]="prestation.type">
-            <option *ngFor="let type of typePrestation" [value]="type">{{ type }}</option>
+          <select [(ngModel)]="prestation.type" [appTypeColor]="prestation.type" class="form-control">
+            <option *ngFor="let type of typePrestation" [value]="type" [appTypeColor]="type">{{ type }}</option>
           </select>
         </td>
         <td>{{ prestation.client }}</td>
@@ -15,7 +15,7 @@
         <td>{{ prestation | total: 'ht' | currency: 'EUR' }}</td>
         <td>{{ prestation | total: 'ttc' | currency: 'EUR' }}</td>
         <td>{{ prestation.tva }} %</td>
-        <td>
+        <td >
           <select [(ngModel)]="prestation.status">
             <option *ngFor="let statut of statutPrestation" [value]="statut">{{ statut }}</option>
           </select>

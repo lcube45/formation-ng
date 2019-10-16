@@ -59,4 +59,5 @@ npm run generate-doc
 * Transclusion = projection de template
 * ngx translate : library i18n
 * stratégie "changement de détection" (ex: OnPush)
+* Ne pas passer d'objet complet à une directive qui surveille des changements, il faut passer des propriétés (car sinon l'adresse mémoire de l'objet n'évoluant pas, ...)
 
