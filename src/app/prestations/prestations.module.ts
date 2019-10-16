@@ -4,13 +4,19 @@ import { ListPrestationsComponent } from './containers/list-prestations/list-pre
 import { EditPrestationComponent } from './containers/edit-prestation/edit-prestation.component';
 import { AddPrestationComponent } from './containers/add-prestation/add-prestation.component';
 import { PrestationsRoutingModule } from './prestations-routing.module';
+import { TemplatesModule } from '../templates/templates.module';
+import { SharedModule } from '../shared/shared.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [ListPrestationsComponent, EditPrestationComponent, AddPrestationComponent],
   imports: [
     CommonModule,
-    PrestationsRoutingModule
+    PrestationsRoutingModule,
+    TemplatesModule,
+    SharedModule,
+    FormsModule
   ]
 })
 

@@ -56,3 +56,7 @@ npm run generate-doc
 * Si Lazy Loading de module, il faut utiliser le pre loading de module
 * Un composant ça se déclare, ça s'importe
 * Un module ça s'exporte
+* Transclusion = projection de template
+* ngx translate : library i18n
+* stratégie "changement de détection" (ex: OnPush)
+

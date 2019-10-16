@@ -1,8 +1,8 @@
 <div class="top">
-  <h1>{{title}}</h1>
-  <p>{{label}}</p>
+  <h1 *ngIf="title">{{title}}</h1>
+  <p *ngIf="label">{{label}}</p>
 </div>
 
 <div class="content container-fluid">
-  <!-- TODO -->
+  <ng-content></ng-content>
 </div>

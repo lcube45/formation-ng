@@ -1,1 +1,31 @@
-<p>list-prestations works!</p>
+<app-template-b title="Prestations" label="Liste des prestations">
+
+  <ng-container *ngIf="collection && collection.length > 0; else noElementTemplate ">
+    <app-table [cols]="headers">
+      <tr *ngFor="let prestation of collection; let i = index">
+        <th scope="row">{{ prestation.id }}</th>
+        <td>
+          <select [(ngModel)]="prestation.type">
+            <option *ngFor="let type of typePrestation" [value]="type">{{ type }}</option>
+          </select>
+        </td>
+        <td>{{ prestation.client }}</td>
+        <td>{{ prestation.duree }}</td>
+        <td>{{ prestation.tjmHt | currency: 'EUR' }}</td>
+        <td>{{ prestation | total: 'ht' | currency: 'EUR' }}</td>
+        <td>{{ prestation | total: 'ttc' | currency: 'EUR' }}</td>
+        <td>{{ prestation.tva }} %</td>
+        <td>
+          <select [(ngModel)]="prestation.status">
+            <option *ngFor="let statut of statutPrestation" [value]="statut">{{ statut }}</option>
+          </select>
+        </td>
+      </tr>
+    </app-table>
+  </ng-container>
+
+  <ng-template #noElementTemplate>
+    <h3>Pas d'élément</h3>
+  </ng-template>
+
+</app-template-b>
