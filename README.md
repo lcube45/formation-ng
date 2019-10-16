@@ -61,3 +61,10 @@ npm run generate-doc
 * stratégie "changement de détection" (ex: OnPush)
 * Ne pas passer d'objet complet à une directive qui surveille des changements, il faut passer des propriétés (car sinon l'adresse mémoire de l'objet n'évoluant pas, ...)
 
+## Utilisation Firebase
+* déploiement de notre application avec firebase
+* ng deploy (build and push src to firebase)
+
+## PWA
+* ng add @angular/pwa
+* realfavicongenerator.net

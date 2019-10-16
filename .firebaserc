@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ng-crm-52b04": {
+      "hosting": {
+        "crm": [
+          "ng-crm-52b04"
+        ]
+      }
+    }
+  }
+}

@@ -7,6 +7,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UiModule } from './ui/ui.module';
 import { LoginModule } from './login/login.module';
 import { Router } from '@angular/router';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { Router } from '@angular/router';
     AppRoutingModule,
     NgbModule,
     UiModule,
-    LoginModule
+    LoginModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
