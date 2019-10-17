@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PhotoService } from '../../services/photo.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -8,12 +10,14 @@ import { Component, OnInit } from '@angular/core';
 export class LoginComponent implements OnInit {
 
   user = {username: '', password: ''};
+  photos$: Observable<any>;
 
-  constructor() {
+  constructor(private photoService: PhotoService) {
 
   }
 
   ngOnInit() {
+    this.photos$ = this.photoService.list();
   }
 
   register() {

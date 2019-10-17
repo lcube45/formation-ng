@@ -17,7 +17,7 @@ export class ListPrestationsComponent implements OnInit {
   statutPrestation = Object.values(StatusPrestation);
 
   constructor(private prestationService: PrestationService) {
-    this.collection = this.prestationService.collection;
+    //this.collection = this.prestationService.findAll();
   }
 
   ngOnInit() {

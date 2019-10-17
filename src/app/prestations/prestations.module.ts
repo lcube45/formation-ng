@@ -9,7 +9,6 @@ import { SharedModule } from '../shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormPrestationComponent } from './components/form-prestation/form-prestation.component';
 
-
 @NgModule({
   declarations: [ListPrestationsComponent, EditPrestationComponent, AddPrestationComponent, FormPrestationComponent],
   imports: [

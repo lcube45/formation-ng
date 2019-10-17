@@ -9,6 +9,8 @@ import { LoginModule } from './login/login.module';
 import { Router } from '@angular/router';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { HttpClientModule } from '@angular/common/http';
+import { PageNotFoundModule } from './page-not-found/page-not-found.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { environment } from '../environments/environment';
     NgbModule,
     UiModule,
     LoginModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    PageNotFoundModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
