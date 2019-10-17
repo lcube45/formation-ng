@@ -75,3 +75,4 @@ npm run generate-doc
 ## Formulaire
 * soit piloté par le template soit par le code (méthode préféré par le code)
 * FormControl = un champ de notre formulaire (input, select, ...)
+* FormGroup = plusieurs FormControl = le formulaire en entier
