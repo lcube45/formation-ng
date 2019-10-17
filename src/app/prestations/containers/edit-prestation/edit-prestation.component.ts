@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PrestationService } from '../../services/prestation.service';
+import { Prestation } from 'src/app/shared/models/prestation';
 
 @Component({
   selector: 'app-edit-prestation',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditPrestationComponent implements OnInit {
 
-  constructor() { }
+  constructor(private prestationService: PrestationService) { }
 
   ngOnInit() {
+  }
+
+  editPrestation(event: Prestation) {
+    this.prestationService.edit(event);
   }
 
 }

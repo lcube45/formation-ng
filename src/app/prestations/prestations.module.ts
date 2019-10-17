@@ -6,7 +6,7 @@ import { AddPrestationComponent } from './containers/add-prestation/add-prestati
 import { PrestationsRoutingModule } from './prestations-routing.module';
 import { TemplatesModule } from '../templates/templates.module';
 import { SharedModule } from '../shared/shared.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormPrestationComponent } from './components/form-prestation/form-prestation.component';
 
 
@@ -17,7 +17,8 @@ import { FormPrestationComponent } from './components/form-prestation/form-prest
     PrestationsRoutingModule,
     TemplatesModule,
     SharedModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 

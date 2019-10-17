@@ -7,7 +7,7 @@ export class Prestation implements PrestationI {
   type: TypePrestation = TypePrestation.FORMATION;
   client: string;
   duree = 1;
-  tjmHt = 50;
+  tjmHt = 300;
   tva = 20;
   status: StatusPrestation = StatusPrestation.OPTION;
 

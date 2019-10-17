@@ -76,3 +76,10 @@ npm run generate-doc
 * soit piloté par le template soit par le code (méthode préféré par le code)
 * FormControl = un champ de notre formulaire (input, select, ...)
 * FormGroup = plusieurs FormControl = le formulaire en entier
+
+## Injection
+* par défaut les services sont injectés "globalement" (root)
+* on peut limiter l'injection d'un service à un module (syntaxe Providers)
+* les services peuvent être injectés dans un composant (providers) mais ici ce ne sont pas des singletons (à chaque instance du composant = 1 instance du service)
+ex: composant datepicker avec un service, plusieurs utilisations du datepicker dans une appli, 
+on attend donc d'avoir plusieurs instances du service de dialogue avec le composant datepicker
