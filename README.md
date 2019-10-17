@@ -70,3 +70,8 @@ npm run generate-doc
 * realfavicongenerator.net
 
 ## Web components et angular elements
+* ng build --prod --project myelement --output-hashing none --single-bundle true
+
+## Formulaire
+* soit piloté par le template soit par le code (méthode préféré par le code)
+* FormControl = un champ de notre formulaire (input, select, ...)

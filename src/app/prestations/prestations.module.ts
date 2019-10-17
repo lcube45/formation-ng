@@ -7,10 +7,11 @@ import { PrestationsRoutingModule } from './prestations-routing.module';
 import { TemplatesModule } from '../templates/templates.module';
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule } from '@angular/forms';
+import { FormPrestationComponent } from './components/form-prestation/form-prestation.component';
 
 
 @NgModule({
-  declarations: [ListPrestationsComponent, EditPrestationComponent, AddPrestationComponent],
+  declarations: [ListPrestationsComponent, EditPrestationComponent, AddPrestationComponent, FormPrestationComponent],
   imports: [
     CommonModule,
     PrestationsRoutingModule,

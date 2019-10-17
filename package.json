@@ -17,6 +17,7 @@
     "@angular/common": "~8.2.10",
     "@angular/compiler": "~8.2.10",
     "@angular/core": "~8.2.10",
+    "@angular/elements": "^8.2.10",
     "@angular/fire": "^5.2.1",
     "@angular/forms": "~8.2.10",
     "@angular/platform-browser": "~8.2.10",
@@ -31,7 +32,9 @@
     "@ng-bootstrap/schematics": "^2.0.0-alpha.1",
     "bootstrap": "^4.0.0",
     "dayjs": "^1.8.16",
+    "document-register-element": "^1.7.2",
     "firebase": ">= 5.5.7 <7",
+    "ngx-build-plus": "^8.1.5",
     "rxjs": "~6.5.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
