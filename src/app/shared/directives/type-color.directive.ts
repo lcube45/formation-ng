@@ -18,7 +18,6 @@ export class TypeColorDirective implements OnChanges {
   }
 
   private formatClass(type: TypePrestation) {
-    console.log(type);
     return `type-${type.toLowerCase()}`;
   }
 }

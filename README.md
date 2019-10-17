@@ -68,3 +68,5 @@ npm run generate-doc
 ## PWA
 * ng add @angular/pwa
 * realfavicongenerator.net
+
+## Web components et angular elements

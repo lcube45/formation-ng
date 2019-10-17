@@ -135,6 +135,128 @@
           "options": {}
         }
       }
+    },
+    "myelement": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/myelement",
+      "sourceRoot": "projects/myelement/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/myelement",
+            "index": "projects/myelement/src/index.html",
+            "main": "projects/myelement/src/main.ts",
+            "polyfills": "projects/myelement/src/polyfills.ts",
+            "tsConfig": "projects/myelement/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/myelement/src/favicon.ico",
+              "projects/myelement/src/assets"
+            ],
+            "styles": [
+              "projects/myelement/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/myelement/src/environments/environment.ts",
+                  "with": "projects/myelement/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "myelement:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "myelement:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "myelement:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/myelement/src/test.ts",
+            "polyfills": "projects/myelement/src/polyfills.ts",
+            "tsConfig": "projects/myelement/tsconfig.spec.json",
+            "karmaConfig": "projects/myelement/karma.conf.js",
+            "assets": [
+              "projects/myelement/src/favicon.ico",
+              "projects/myelement/src/assets"
+            ],
+            "styles": [
+              "projects/myelement/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/myelement/tsconfig.app.json",
+              "projects/myelement/tsconfig.spec.json",
+              "projects/myelement/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/myelement/e2e/protractor.conf.js",
+            "devServerTarget": "myelement:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "myelement:serve:production"
+            }
+          }
+        }
+      }
     }
   },
   "defaultProject": "crm"
