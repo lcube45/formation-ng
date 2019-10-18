@@ -1,8 +1,8 @@
 <app-template-b title="Prestations" label="Liste des prestations">
 
-  <ng-container *ngIf="collection$; else noElementTemplate ">
+  <ng-container *ngIf="(collection$ | async) as mycollection; else noElementTemplate ">
     <app-table [cols]="headers">
-      <tr *ngFor="let prestation of collection$ | async; let i = index">
+      <tr *ngFor="let prestation of mycollection; let i = index">
         <th scope="row">{{ prestation.id | slice:0:5 }}</th>
         <td>
           <select [(ngModel)]="prestation.type" (change)="changeType(prestation, $event)" [appTypeColor]="prestation.type" class="form-control">
@@ -22,7 +22,7 @@
         </td>
         <td>
           <button type="button" class="btn btn-success" (click)="edit(prestation)">Edit</button>
-          <button type="button" class="btn btn-danger" (click)="delete(prestation)">Danger</button>
+          <button type="button" class="btn btn-danger" (click)="delete(prestation)">Delete</button>
         </td>
       </tr>
     </app-table>
