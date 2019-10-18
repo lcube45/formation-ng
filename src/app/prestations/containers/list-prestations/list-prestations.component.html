@@ -1,11 +1,11 @@
 <app-template-b title="Prestations" label="Liste des prestations">
 
-  <ng-container *ngIf="collection && collection.length > 0; else noElementTemplate ">
+  <ng-container *ngIf="collection$; else noElementTemplate ">
     <app-table [cols]="headers">
-      <tr *ngFor="let prestation of collection; let i = index">
-        <th scope="row">{{ prestation.id }}</th>
+      <tr *ngFor="let prestation of collection$ | async; let i = index">
+        <th scope="row">{{ prestation.id | slice:0:5 }}</th>
         <td>
-          <select [(ngModel)]="prestation.type" [appTypeColor]="prestation.type" class="form-control">
+          <select [(ngModel)]="prestation.type" (change)="changeType(prestation, $event)" [appTypeColor]="prestation.type" class="form-control">
             <option *ngFor="let type of typePrestation" [value]="type" [appTypeColor]="type">{{ type }}</option>
           </select>
         </td>
@@ -16,9 +16,13 @@
         <td>{{ prestation | total: 'ttc' | currency: 'EUR' }}</td>
         <td>{{ prestation.tva }} %</td>
         <td >
-          <select [(ngModel)]="prestation.status">
+          <select [(ngModel)]="prestation.status" (change)="changeStatus(prestation, $event)">
             <option *ngFor="let statut of statutPrestation" [value]="statut">{{ statut }}</option>
           </select>
+        </td>
+        <td>
+          <button type="button" class="btn btn-success" (click)="edit(prestation)">Edit</button>
+          <button type="button" class="btn btn-danger" (click)="delete(prestation)">Danger</button>
         </td>
       </tr>
     </app-table>

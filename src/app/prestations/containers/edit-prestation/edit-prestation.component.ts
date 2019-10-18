@@ -15,7 +15,7 @@ export class EditPrestationComponent implements OnInit {
   }
 
   editPrestation(event: Prestation) {
-    this.prestationService.edit(event);
+    //this.prestationService.update(id, event);
   }
 
 }
