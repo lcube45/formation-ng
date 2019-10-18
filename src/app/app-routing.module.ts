@@ -4,6 +4,9 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 const routes: Routes = [
   {path: 'prestations', loadChildren: () => import('./prestations/prestations.module').then(
     (m) => m.PrestationsModule
+  )},
+  {path: 'clients', loadChildren: () => import('./clients/clients.module').then(
+    (m) => m.ClientsModule
   )}
 ];
 

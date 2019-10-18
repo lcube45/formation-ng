@@ -1,0 +1,20 @@
+<app-template-b title="Prestations" label="Liste des prestations">
+
+    <ng-container *ngIf="(collection$ | async) as mycollection; else noElementTemplate ">
+      <app-table [cols]="headers">
+        <tr *ngFor="let client of mycollection; let i = index">
+          <th scope="row">{{ client.id | slice:0:5 }}</th>
+          <td>{{ client.label }}</td>
+          <td>
+            <button type="button" class="btn btn-success" (click)="edit(client)">Edit</button>
+            <button type="button" class="btn btn-danger" (click)="delete(client)">Delete</button>
+          </td>
+        </tr>
+      </app-table>
+    </ng-container>
+
+    <ng-template #noElementTemplate>
+      <h3>Pas d'élément</h3>
+    </ng-template>
+
+  </app-template-b>

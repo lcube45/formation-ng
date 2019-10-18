@@ -1,0 +1,9 @@
+<div class="container">
+  <form (ngSubmit)="register()" [formGroup]="myForm">
+      <div class="form-group">
+          <label for="label">Label</label>
+          <input type="text" formControlName="label" class="form-control" />
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="myForm.invalid">Submit</button>
+  </form>
+</div>
